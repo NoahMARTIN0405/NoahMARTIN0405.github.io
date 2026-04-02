@@ -213,6 +213,11 @@ section {
   height: 2rem;
 }
 
+.icon-log {
+  cursor: pointer;
+  height: 9rem;
+}
+
 /* BUTTONS */
 
 .btn-container {
@@ -430,3 +435,28 @@ footer {
 footer p {
   text-align: center;
 }
+
+table, th, td {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-collapse: collapse;
+}
+
+/* -- espacement et alignement dans les cellules -- */
+
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+/* -- Entête en inverse grisé -- */
+
+th {
+  background-color: darkgrey;
+  color: white;
+}
+td:hover {
+  text-decoration: underline;
+}
+

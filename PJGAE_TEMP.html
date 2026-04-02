@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        #myImg {
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        #myImg:hover {opacity: 0.7;}
+        
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+        
+        /* Modal Content (image) */
+        .modal-content {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+        }
+        
+        /* Caption of Modal Image */
+        #caption {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+          text-align: center;
+          color: #ccc;
+          padding: 10px 0;
+          height: 150px;
+        }
+        
+        /* Add Animation */
+        .modal-content, #caption {  
+          -webkit-animation-name: zoom;
+          -webkit-animation-duration: 0.6s;
+          animation-name: zoom;
+          animation-duration: 0.6s;
+        }
+        
+        @-webkit-keyframes zoom {
+          from {-webkit-transform:scale(0)} 
+          to {-webkit-transform:scale(1)}
+        }
+        
+        @keyframes zoom {
+          from {transform:scale(0)} 
+          to {transform:scale(1)}
+        }
+        
+        /* The Close Button */
+        .close {
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: #f1f1f1;
+          font-size: 40px;
+          font-weight: bold;
+          transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px){
+          .modal-content {
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+    <section id="about">
+        <h1 class="title">Projet Gestion d'afficheurs ESP 32</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img id="myImg" src="./assets/preuve.png" class="about-pic">
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+                <h3>Compétence</h3>
+                <p>Travailler en mode projet</p>
+              </div>
+              <div class="details-container">
+                <img src="./assets/education.png" alt="Education icon" class="icon"/>
+                <h3>Nombre de personnes</h3>
+                <p>1</p>
+              </div>
+            </div>
+            <div class="text-container">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora placeat ullam cupiditate provident incidunt eos nostrum pariatur facilis repellendus nulla! Amet perspiciatis beatae voluptate nesciunt velit magnam expedita molestias ut!
+                    Voluptatum veritatis in eaque reiciendis quae possimus inventore suscipit voluptatem at, explicabo fugiat, deleniti non atque consequuntur! Optio velit nemo saepe doloremque, voluptatibus eaque possimus suscipit doloribus, ducimus pariatur necessitatibus! <br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium odio nesciunt, quis iure explicabo eum reiciendis consequatur voluptates alias dolores totam iusto architecto voluptatem vero numquam accusantium! Voluptas, impedit necessitatibus!
+                </p>
+            </div>
+          </div>
+        </div>
+        <div>
+            <a href="PJGAE_MDUUSI.html"><img src="./assets/image.png" alt="Arrow icon" class="icon arrow"/></a>
+            <a href="PJGAE_DLPEL.html"><img src="./assets/image2.png" alt="Arrow icon" class="icon arrow" style="margin-right: 50px;"/></a>
+        </div>
+      </section>
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
+</body>
+</html>

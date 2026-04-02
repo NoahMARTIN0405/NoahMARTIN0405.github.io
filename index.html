@@ -1,323 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Mon Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">John Doe</div>
+      <div class="logo">Noah MARTIN</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#experience">Mon parcours</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Tableau compétences</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">John Doe</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
       </div>
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+        <img src="./assets/1762983059183-fotor-20260313231732.png" alt="John Doe profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">John Doe</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <p class="section__text__p1">Bonjour, je suis</p>
+        <h1 class="title">Noah MARTIN</h1>
+        <p class="section__text__p2">Étudiant en BTS SIO</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+          <a href="pdf/CV_Noah_MARTIN.pdf" target="_blank"><button class="btn btn-color-2"> Visionner CV</button></a>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/'"
-          />
+          <a href="https://www.linkedin.com/feed/" target="_blank"><img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"/></a>
+          <a href=""><img src="./assets/github.png" alt="My Github profile" class="icon"/></a>
         </div>
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+      <p class="section__text__p1">Pour en savoir plus</p>
+      <h1 class="title">À propos de moi</h1>
       <div class="section-container">
         <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+          <img src="./assets/1762983059183.jpeg" alt="Profile picture" class="about-pic"/>
         </div>
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+              <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+              <h3>Expérience</h3>
+              <p>12 semaines de stage <br />en tant que Développeur Full Stack</p>
             </div>
             <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+              <img src="./assets/education.png" alt="Education icon" class="icon"/>
+              <h3>Études</h3>
+              <p>BTS SIO option SLAM<br />Bac STMG option Mercatique</p>
             </div>
           </div>
           <div class="text-container">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+              Je m’appelle Noah MARTIN, j’ai 21 ans et je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations), spécialité SLAM (Solutions Logicielles et Applications Métiers).
+              Titulaire d’un baccalauréat STMG (Sciences et Technologies du Management et de la Gestion), option Mercatique, j’ai choisi de faire une pause de deux ans après son obtention afin de réfléchir à mon orientation et d’acquérir une première expérience dans le monde du travail.
+              Lorsque j’ai intégré ce BTS, je n’étais pas certain qu’il correspondait réellement à ce que je voulais faire. Cependant, mes stages m’ont permis de confirmer mon intérêt pour l’informatique : j’ai découvert que je souhaitais m’investir pleinement dans l’amélioration du quotidien des utilisateurs à travers des solutions logicielles innovantes.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
+      <a href="#experience"><img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"/></a>
     </section>
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <p class="section__text__p1">Rétrospective de </p>
+      <h1 class="title">Mon parcours</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Professionel</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/image.png" alt="Experience icon" class="icon"/>
                 <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
+                  <h3>Mcdonald's</h3>
+                  <p>2 ans</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/image.png" alt="Experience icon" class="icon"/>
                 <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
+                  <h3>C2S</h3>
+                  <p>6 mois</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/image.png" alt="Experience icon" class="icon"/>
                 <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
+                  <h3>Intérim</h3>
+                  <p>7 mois</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/image.png" alt="Experience icon" class="icon"/>
                 <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
+                  <h3>ACTIA</h3>
+                  <p>9 mois</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/image.png" alt="Experience icon" class="icon"/>
                 <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
+                  <h3>Stage 1ère année</h3>
+                  <p>6 semaines</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
                 <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
+                  <h3>Stage 2ième année</h3>
+                  <p>6 semaines</p>
                 </div>
               </article>
             </div>
           </div>
         </div>
+        <br>
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Scolaire</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/GérerPatInformatiqe.png" alt="Experience icon" class="icon-log"/>
+              </article>
+              <article>
+              <img src="./assets/RepAuxIncidents.png" alt="Experience icon" class="icon-log"/>
+              </article>
+              <article>
+                <img src="./assets/DevLaPresEnLigne.png" alt="Experience icon" class="icon-log"/>
+              </article>
+              <article>
+                <img src="./assets/TravEnModeProj.png" alt="Experience icon" class="icon-log"/>
+              </article>
+              <article>
+                <img src="./assets/MettreADisUnSI.png" alt="Experience icon" class="icon-log"/>
+              </article>
+              <article>
+                <img src="./assets/OrgaSonDevPro.png" alt="Experience icon" class="icon-log"/>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+      <a href="#projects"><img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"/></a>
     </section>
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <p class="section__text__p1">Parcourir mes</p>
+      <h1 class="title">Projets</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+              <img src="./assets/Logo_GLPI.png" alt="Project 1" class="project-img"/>
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">AP GLPI</h2>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/Logo_M2L.png" alt="Project 2" class="project-img"/>
+            </div>
+            <h2 class="experience-sub-title project-title">AP Maison des Ligues</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+              <a href="https://github.com/MatheoPUEL/M2L/blob/main/README.md" target="_blank"><button class="btn btn-color-2 project-btn">Github</button></a>
             </div>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
+                src="./assets/Logo_ACTIA.png"
                 alt="Project 3"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="experience-sub-title project-title">Projet gestion des effectifs et productivités</h2>
+            <div class="btn-container">
+              <a href="https://github.com/NoahMARTIN0405/BTS-Stage-1erAnnee" target="_blank"><button class="btn btn-color-2 project-btn">Github</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/Logo_RestoWeb.png" alt="Image AP RestoWeb" class="project-img"/>
+            </div>
+            <h2 class="experience-sub-title project-title">AP RestoWeb</h2>
+            <div class="btn-container">
+              <a href=""><button class="btn btn-color-2 project-btn">Github</button></a>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/" alt="Image AP RestoSwing" class="project-img"/>
+            </div>
+            <h2 class="experience-sub-title project-title">AP RestoSwing</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -325,57 +206,128 @@
               >
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Logo_ACTIA.png"
+                alt="Image Stage 2ième année"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Projet gestion d'afficheurs ESP 32 (Totem EPI's)</h2>
+            <div class="btn-container">
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      <br><br><br>
+      <a href="#contact"><img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"/></a>
     </section>
+    
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-        </div>
-      </div>
+      <p class="section__text__p1">Résumé de mon</p>
+      <h1 class="title">Tableau de Compétences</h1>
+      <br>
+      <table>
+        <tr>
+          <td></td>
+          <th>Gérer le patrimoine <br> informatique</th>
+          <th>Répondre aux incidents <br> et aux demandes <br> d'assistance et d'évolution</th>
+          <th>Développer la présence <br> en ligne de <br> l'organisation</th>
+          <th>Travailler en mode <br> projet</th>
+          <th>Mettre à dispositon <br> des utilisateurs un <br> service informatique</th>
+          <th>Organiser son développement <br> professionel</th>
+        </tr>
+        <tr>
+          <th>AP GLPI <br>&nbsp;</th>
+          <td><a href="APGLPI_GPI.html">X</a></td>
+          <td><a href="APGLPI_RIDAE.html">X</a></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>AP Maison des Ligues <br>&nbsp;</th>
+          <td></td>
+          <td></td>
+          <td><a href="APM2L_DLPEL.html">X</a></td>
+          <td><a href="APM2L_TEMP.html">X</a></td>
+          <td><a href="APM2L_MDUUSI.html">X</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>AP RestoWeb <br>&nbsp;</th>
+          <td></td>
+          <td></td>
+          <td><a href="APRW_DLPEL.html">X</a></td>
+          <td><a href="APRW_TEMP.html">X</a></td>
+          <td><a href="APRW_MDUUSI.html">X</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>AP RestoSwing <br>&nbsp;</th>
+          <td></td>
+          <td></td>
+          <td><a href="APRS_DLPEL.html">X</a></td>
+          <td><a href="APRS_TEMP.html">X</a></td>
+          <td><a href="APRS_MDUUSI.html">X</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Projet Gestion des effectifs <br> et productivités</th>
+          <td><a href="PJGEP_GPI.html">X</a></td>
+          <td></td>
+          <td><a href="PJGEP_DLPEL.html">X</a></td>
+          <td><a href="PJGEP_TEMP.html">X</a></td>
+          <td><a href="PJGEP_MDUUSI.html">X</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Projet gestionnaire d'afficheurs <br>ESP 32</th>
+          <td><a href="PJGAE_GPI.html">X</a></td>
+          <td><a href="PJGAE_RIEDAE.html">X</a></td>
+          <td><a href="PJGAE_DLPEL.html">X</a></td>
+          <td><a href="PJGAE_TEMP.html">X</a></td>
+          <td><a href="PJGAE_MDUUSI.html">X</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Parcours certifications <br>&nbsp;</th>
+          <td><a href="PC.html">X</a></td>
+          <td><a href="PC.html">X</a></td>
+          <td><a href="PC.html">X</a></td>
+          <td><a href="PC.html">X</a></td>
+          <td><a href="PC.html">X</a></td>
+          <td><a href="PC.html">X</a></td>
+        </tr>
+        <tr>
+          <th>Veille informationelle <br>&nbsp;</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="VI.html">X</a></td>
+        </tr>
+      </table>
+      <a href="pdf/E5_2025_Tableau des competences_Tableau_de_synthese_epreuve_E4.pdf" target="_blank"><p class="section__text__p1">Accéder au tableau de compétences original</p></a>
+
     </section>
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#experience">Mon parcours</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Tableau compétences</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+      <p>Copyright &#169; 2026 Noah MARTIN. Tous droits réservés</p>
     </footer>
     <script src="script.js"></script>
   </body>
