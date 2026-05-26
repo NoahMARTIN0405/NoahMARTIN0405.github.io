@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio BTS SIO — Situations professionnelles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">Portfolio<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="situations.html" class="active">Situation professionnelle</a></li>
+      <li><a href="competences.html">Bloc de compétences</a></li>
+      <li><a href="veille.html">Veille technologique</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- HERO PAGE -->
+  <div class="page-hero">
+    <div class="label center">Situations professionnelles</div>
+    <h1 class="page-title">Mes réalisations</h1>
+    <p class="page-subtitle">Situations vécues en formation et en stage</p>
+  </div>
+
+  <!-- FILTRE -->
+  <section class="section">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterSituations('all', this)">Toutes</button>
+        <button class="filter-btn" onclick="filterSituations('formation', this)">En formation</button>
+        <button class="filter-btn" onclick="filterSituations('stage', this)">En stage</button>
+      </div>
+
+      <!-- EN FORMATION -->
+      <div class="situations-group" id="group-formation">
+        <div class="group-header">
+          <span class="group-badge formation">En formation</span>
+          <h2>Situations réalisées en cours de formation</h2>
+        </div>
+
+        <div class="situations-grid">
+
+          <div class="situation-card" data-type="formation">
+            <div class="situation-number">01</div>
+            <div class="situation-meta">
+              <span class="competence-tag">Situation 01</span>
+              <span class="date-tag">2024</span>
+            </div>
+            <h3>TP GLPI</h3>
+            <p>ETENSUP nous a fourni plusieurs organigrammes à intégrer dans le gestionnaire libre de parc informatique GLPI, afin d’optimiser la gestion de son parc informatique.</p>
+            <div class="situation-tools">
+              <span class="tool-tag">GLPI</span>
+            </div>
+          </div>
+
+          <div class="situation-card" data-type="formation">
+            <div class="situation-number">02</div>
+            <div class="situation-meta">
+              <span class="competence-tag">Situation 02</span>
+              <span class="date-tag">2025</span>
+            </div>
+            <h3>AP Maison Des Ligues</h3>
+            <p>La M2L a pour mission de fournir des espaces et des services (Marketing, Logistique, Informatique, ...) aux différentes ligues sportives régionales et autres structures qui y sont hébergées.</p>
+            <div class="situation-tools">
+              <span class="tool-tag">HTML</span>
+              <span class="tool-tag">CSS</span>
+              <span class="tool-tag">PHP</span>
+              <span class="tool-tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="situation-card" data-type="formation">
+            <div class="situation-number">03</div>
+            <div class="situation-meta">
+              <span class="competence-tag">Situation 03</span>
+              <span class="date-tag">2025</span>
+            </div>
+            <h3>AP RestoWeb</h3>
+            <p>C'est une application Web utilisée par les clients du restaurant. Elle permet de voir le menu et de passer une commande.</p>
+            <div class="situation-tools">
+              <span class="tool-tag">HTML</span>
+              <span class="tool-tag">CSS</span>
+              <span class="tool-tag">PHP</span>
+              <span class="tool-tag">MariaDB</span>
+              <span class="tool-tag">API REST</span>
+              <span class="tool-tag">VSCode</span>
+            </div>
+          </div>
+
+          <div class="situation-card" data-type="formation">
+            <div class="situation-number">04</div>
+            <div class="situation-meta">
+              <span class="competence-tag">Situation 04</span>
+              <span class="date-tag">2026</span>
+            </div>
+            <h3>AP RestoSwing</h3>
+            <p>C'est un client lourd en Java/Swing qui permet au restaurateur de gérer les commandes. Celui-ci peut les afficher, les accepter, les refuser et indiquer quand elles sont prêtes.</p>
+            <div class="situation-tools">
+              <span class="tool-tag">Java</span>
+              <span class="tool-tag">Swing</span>
+              <span class="tool-tag">API REST</span>
+              <span class="tool-tag">Netbeans</span>
+            </div>
+          </div>
+
+          <div class="situation-card" data-type="formation">
+            <div class="situation-number">05</div>
+            <div class="situation-meta">
+              <span class="competence-tag">Situation 05</span>
+              <span class="date-tag">2025-2026</span>
+            </div>
+            <h3>TP Cas rugby</h3>
+            <p>La LNR souhaite optimisez son système d'information afin de traiter, de manière optimale, ses données</p>
+            <div class="situation-tools">
+              <span class="tool-tag">SQL</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- EN STAGE -->
+      <div class="situations-group" id="group-stage">
+        <div class="group-header">
+          <span class="group-badge stage">En stage</span>
+          <h2>Situations réalisées en stage</h2>
+        </div>
+
+        <div class="situations-grid">
+
+          <div class="situation-card" data-type="stage">
+            <div class="situation-number">06</div>
+            <div class="situation-meta">
+              <span class="competence-tag">Situation 01</span>
+              <span class="date-tag">2025</span>
+            </div>
+            <h3>Projet gestion des effectifs et productivités</h3>
+            <p>Convertion d'un outil Excel utilisé pour la gestion des effectifs et de la production, en une application web reliée à une base de données.</p>
+            <div class="situation-tools">
+              <span class="tool-tag">HTML</span>
+              <span class="tool-tag">CSS</span>
+              <span class="tool-tag">PHP</span>
+              <span class="tool-tag">SQL</span>
+              <span class="tool-tag">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="situation-card" data-type="stage">
+            <div class="situation-number">07</div>
+            <div class="situation-meta">
+              <span class="competence-tag">Situation 02</span>
+              <span class="date-tag">2026</span>
+            </div>
+            <h3>Projet gestion d'afficheurs ESP 32 (Totem EPI's)</h3>
+            <p>Développement d’un outil répondant aux contraintes de gestion de matières soumises à péremption.</p>
+            <div class="situation-tools">
+              <span class="tool-tag">HTML</span>
+              <span class="tool-tag">CSS</span>
+              <span class="tool-tag">PHP</span>
+              <span class="tool-tag">SQL</span>
+              <span class="tool-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 — Portfolio BTS SIO · Noah MARTIN</p>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    function filterSituations(type, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const groupFormation = document.getElementById('group-formation');
+      const groupStage = document.getElementById('group-stage');
+
+      if (type === 'all') {
+        groupFormation.style.display = '';
+        groupStage.style.display = '';
+      } else if (type === 'formation') {
+        groupFormation.style.display = '';
+        groupStage.style.display = 'none';
+      } else {
+        groupFormation.style.display = 'none';
+        groupStage.style.display = '';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<link rel="stylesheet" href="style.css">
+<nav class="navbar">
+    <div class="nav-logo">Portfolio<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="situations.html">Situation professionnelle</a></li>
+      <li><a href="competences.html" class="active">Bloc de compétences</a></li>
+      <li><a href="veille.html">Veille technologique</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+  .p {
+    --blue: #3B5BDB;
+    --blue-light: #EEF2FF;
+    --blue-mid: #4C6EF5;
+    --dark: #111827;
+    --gray: #6B7280;
+    --gray-light: #F3F4F8;
+    --white: #FFFFFF;
+    --border: #E5E7EB;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow: 0 4px 24px rgba(59,91,219,0.08);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--dark);
+    background: var(--white);
+  }
+
+  .p * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .p-page-hero {
+    padding: 3.5rem 2rem 2.5rem;
+    text-align: center;
+    background: linear-gradient(160deg, #F0F4FF 0%, #FFFFFF 80%);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .p-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+  }
+
+  .p-page-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.15;
+  }
+
+  .p-page-subtitle {
+    font-size: 1rem;
+    color: var(--gray);
+  }
+
+  .p-section { padding: 3rem 2rem; }
+
+  .p-container { max-width: 900px; margin: 0 auto; }
+
+  .p-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .p h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 1.2rem;
+  }
+
+  .p p { color: var(--gray); margin-bottom: 1rem; }
+  .p p:last-child { margin-bottom: 0; }
+  .p p strong { color: var(--dark); font-weight: 700; }
+
+  .p-info-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+
+  .p-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .p-info-icon {
+    font-size: 1.3rem;
+    min-width: 2rem;
+    line-height: 1;
+    color: var(--blue);
+  }
+
+  .p-info-item strong {
+    display: block;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.2rem;
+    font-size: 0.92rem;
+  }
+
+  .p-info-item p { margin: 0; font-size: 0.9rem; }
+
+  .p-section-alt { background: var(--gray-light); }
+
+  .glpi-wrap {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-top: 1.5rem;
+    font-size: 12.5px;
+  }
+
+  .glpi-head {
+    background: #E8F0FB;
+    border-bottom: 1px solid #C8D8F4;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .glpi-head-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 12.5px;
+  }
+
+  .glpi-ico {
+    width: 18px; height: 18px;
+    background: var(--blue);
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .glpi-ico svg { width: 11px; height: 11px; fill: white; }
+
+  .glpi-badges { display: flex; gap: 6px; }
+
+  .glpi-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 1px solid #C8D8F4;
+    color: var(--blue);
+    background: white;
+  }
+
+  .glpi-badge.filled { background: var(--blue); color: white; border-color: var(--blue); }
+
+  .glpi-body { display: grid; grid-template-columns: 1fr 1fr; }
+
+  .glpi-col { padding: 10px 14px; }
+  .glpi-col:first-child { border-right: 1px solid var(--border); }
+
+  .glpi-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    border-bottom: 0.5px solid #F0F0EE;
+    min-height: 26px;
+  }
+
+  .glpi-row:last-child { border-bottom: none; }
+
+  .glpi-lbl {
+    color: #888;
+    font-size: 11.5px;
+    min-width: 105px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .glpi-val {
+    color: var(--dark);
+    font-size: 11.5px;
+    flex: 1;
+    background: #FAFAFA;
+    border: 0.5px solid #DDD;
+    border-radius: 3px;
+    padding: 2px 5px;
+    min-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .glpi-ctrl { color: #BBB; font-size: 10px; display: flex; gap: 2px; }
+
+  .glpi-foot {
+    padding: 10px 14px;
+    text-align: right;
+    border-top: 1px solid var(--border);
+    background: #FAFAF8;
+  }
+
+  .glpi-btn-add {
+    background: #E8A020;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 18px;
+    font-size: 12.5px;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    cursor: default;
+  }
+
+  .p-caption {
+    text-align: center;
+    font-size: 13px;
+    color: var(--gray);
+    font-style: italic;
+    margin-top: 1rem;
+  }
+
+  .p-link {
+    color: var(--blue);
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    .p-two-col { grid-template-columns: 1fr; gap: 2rem; }
+    .glpi-body { grid-template-columns: 1fr; }
+    .glpi-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+  }
+</style>
+
+<div class="p">
+
+  <div class="p-page-hero">
+    <div class="p-label">Compétence 05</div>
+    <h1 class="p-page-title">Mettre à disposition des utilisateurs un service informatique</h1>
+    <p class="p-page-subtitle">Tester, Déployer, Accompagner</p>
+  </div>
+
+  <div class="p-section">
+    <div class="p-container">
+        <div>
+          <div class="p-label">Définition</div>
+          <h2>Qu'est-ce que c'est ?</h2>
+          <p><strong>Mettre à disposition des utilisateurs un service informatique </strong>consiste à installer, configurer et assurer le bon fonctionnement d’un outil ou service numérique répondant aux besoins des utilisateurs.</p>
+          <div class="p-label">Objectifs</div>
+          <p>▸Réaliser les tests d’intégration et d’acceptation d’un service</p>
+          <p>▸Déployer un service</p>
+          <p>▸Accompagner les utilisateurs dans la mise en place d’un service</p>
+        </div>
+    </div>
+  </div>
+  <hr style="opacity: 0.3;">
+  <div class="p-section">
+    <div class="p-container">
+      <div class="p-label">En stage</div>
+      <h2>Projet gestion d'afficheurs ESP32 (Totem EPI's)</h2>
+      <p>Objectif : Tester les fonctionnalités du site</p>
+      <img src="img/Test_fonctionnalité.png" alt="" width="100%">
+      <p class="p-caption">Fiche de test des fonctionnalités</p>
+    </div>
+  </div>
+  <hr style="opacity: 0.3;">
+  <div class="p-section">
+    <div class="p-container">
+      <div class="p-label">En cours de formation</div>
+      <h2>AP M2L - Test des fonctionnalités</h2>
+      <p>Objectif : Assurer à l'utilisateur un service fonctionnel</p>
+      <img src="img/Fiche_test.png" alt="" width="100%">
+
+      <p class="p-caption">Diagramme de Gantt permettant la planification et le suivi du projet</p>
+    </div>
+  </div>
+  <hr style="opacity: 0.3;">
+  <div class="p-section">
+    <div class="p-container">
+      <div class="p-label">En Stage</div>
+      <h2>Projet Gestion d'afficheurs ESP32 (Totem EPI's)</h2>
+      <p>Objectif : Accompagner l'utilisateur dans la mise en place d'un service</p>
+      <img src="img/Vidéo_ESP32.png" alt="" width="100%">
+    
+      <p class="p-caption">Trello de planification de projet</p>
+    </div>
+  </div>
+
+</div>
+<footer class="footer">
+  <p>© 2025 — Portfolio BTS SIO · Noah MARTIN</p>
+</footer>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio BTS SIO — Veille technologique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Veille IA : styles spécifiques ── */
+    .veille-ia-intro { background: #f7f9fc; border-left: 4px solid #1D9E75; border-radius: 0 12px 12px 0; padding: 18px 22px; margin-bottom: 28px; font-size: 15px; line-height: 1.75; color: #333; }
+    .veille-ia-intro strong { color: #1D9E75; }
+
+    /* Thèmes cards */
+    .theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 28px; }
+    .theme-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; padding: 22px 20px; transition: box-shadow .2s; }
+    .theme-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.09); }
+    .theme-card .theme-num { font-size: 11px; font-weight: 600; letter-spacing: .08em; color: #1D9E75; text-transform: uppercase; margin-bottom: 8px; }
+    .theme-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; margin: 0 0 10px; color: #111; }
+    .theme-card p { font-size: 14px; color: #555; line-height: 1.7; margin: 0; }
+
+    /* Articles IA */
+    .ia-article { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; padding: 22px 22px 18px; margin-bottom: 16px; transition: box-shadow .2s; }
+    .ia-article:hover { box-shadow: 0 6px 24px rgba(0,0,0,.08); }
+    .ia-article-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+    .ia-date { font-size: 12px; color: #888; }
+    .ia-badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+    .badge-purple { background: #EEEDFE; color: #3C3489; }
+    .badge-teal   { background: #E1F5EE; color: #085041; }
+    .badge-amber  { background: #FAEEDA; color: #633806; }
+    .badge-coral  { background: #FAECE7; color: #712B13; }
+    .badge-blue   { background: #E6F1FB; color: #0C447C; }
+    .ia-article h3 { font-family: 'Playfair Display', serif; font-size: 17px; margin: 0 0 8px; color: #111; }
+    .ia-article p { font-size: 14px; color: #555; line-height: 1.7; margin: 0 0 12px; }
+    .ia-article a.article-link { font-size: 13px; font-weight: 600; color: #1D9E75; text-decoration: none; }
+    .ia-article a.article-link:hover { text-decoration: underline; }
+
+    /* Sources list */
+    .sources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 20px; }
+    .source-item { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 14px 16px; font-size: 13px; }
+    .source-item strong { display: block; font-weight: 600; color: #111; margin-bottom: 4px; }
+    .source-item a { color: #1D9E75; word-break: break-all; text-decoration: none; font-size: 12px; }
+    .source-item a:hover { text-decoration: underline; }
+
+    /* Synthèse box */
+    .synthese-box { background: linear-gradient(135deg, #f0faf5 0%, #e6f4fb 100%); border-radius: 14px; padding: 28px 26px; margin-top: 28px; }
+    .synthese-box p { font-size: 15px; line-height: 1.8; color: #333; margin: 0; }
+    .synthese-box p + p { margin-top: 14px; }
+
+    /* Method steps (override si besoin) */
+    .protocol-steps { display: flex; align-items: flex-start; gap: 0; flex-wrap: wrap; justify-content: center; margin-top: 30px; }
+    .protocol-step { flex: 1; min-width: 160px; max-width: 220px; text-align: center; padding: 16px 12px; }
+    .step-num { width: 40px; height: 40px; border-radius: 50%; background: #1D9E75; color: #fff; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+    .protocol-step h4 { font-family: 'Playfair Display', serif; font-size: 16px; margin: 0 0 6px; }
+    .protocol-step p { font-size: 13px; color: #555; line-height: 1.6; margin: 0; }
+    .protocol-arrow { font-size: 22px; color: #ccc; margin-top: 28px; padding: 0 6px; }
+
+    @media (max-width: 640px) {
+      .protocol-arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">Portfolio<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="situations.html">Situation professionnelle</a></li>
+      <li><a href="competences.html">Bloc de compétences</a></li>
+      <li><a href="veille.html" class="active">Veille technologique</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="label center">Compétence B1</div>
+    <h1 class="page-title">Veille technologique</h1>
+    <p class="page-subtitle">Intelligence artificielle — tendances, réglementation et impact métier</p>
+  </div>
+
+  <!-- INTRO + SOURCES -->
+  <section class="section">
+    <div class="container two-col">
+      <div class="col-text">
+        <div class="label">Thème de veille</div>
+        <h2>L'intelligence artificielle en 2026</h2>
+        <div class="veille-ia-intro">
+          J'ai choisi de centrer ma veille sur <strong>l'intelligence artificielle</strong>, un domaine en évolution rapide qui transforme directement les métiers de l'informatique. Ma veille porte sur trois axes : les <strong>nouvelles tendances technologiques</strong> (agents IA, multimodalité, quantique), le <strong>cadre réglementaire européen</strong> (AI Act) et l'<strong>impact concret sur les métiers SLAM et SISR</strong>.
+        </div>
+        <p>Cette veille a été réalisée en mai 2026 à partir de sources variées : organismes officiels, rapports d'experts et médias spécialisés.</p>
+      </div>
+      <div class="col-card info-card">
+        <div class="info-item">
+          <span class="info-icon">🏛️</span>
+          <div>
+            <strong>Sources officielles</strong>
+            <p>Commission européenne, Direction générale des Entreprises (gouv.fr)</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📊</span>
+          <div>
+            <strong>Rapports d'experts</strong>
+            <p>IBM Think, KPMG Global Tech Report, EY Suisse</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📰</span>
+          <div>
+            <strong>Médias spécialisés</strong>
+            <p>Orange Business, BPI France / Big Media, AdevWeb</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📡</span>
+          <div>
+            <strong>Agrégateur RSS</strong>
+            <p>Feedly — mis à jour régulièrement</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THÈMES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="label center">3 grands axes</div>
+      <h2 class="center">Thèmes de la veille</h2>
+      <div class="theme-grid">
+        <div class="theme-card">
+          <div class="theme-num">Thème 01</div>
+          <h3>Tendances technologiques</h3>
+          <p>Agents IA autonomes, modèles multimodaux (texte + image + son), informatique quantique. L'IA passe d'assistant à acteur capable d'enchaîner des tâches seul.</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-num">Thème 02</div>
+          <h3>Réglementation (AI Act)</h3>
+          <p>Le règlement européen sur l'IA classe les systèmes par niveau de risque et impose de nouvelles obligations aux entreprises. Application complète en 2027.</p>
+        </div>
+        <div class="theme-card">
+          <div class="theme-num">Thème 03</div>
+          <h3>Impact sur les métiers IT</h3>
+          <p>En SLAM, l'IA générative transforme l'écriture de code. En SISR, l'AIOps et la cybersécurité IA automatisent la supervision et la détection d'incidents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section class="section">
+    <div class="container">
+      <div class="label center">Actualités retenues</div>
+      <h2 class="center">Articles et sujets marquants</h2>
+
+      <div class="ia-article">
+        <div class="ia-article-top">
+          <span class="ia-date">Mai 2026</span>
+          <span class="ia-badge badge-purple">Agents IA</span>
+        </div>
+        <h3>L'IA agentique : de l'assistant au collaborateur autonome</h3>
+        <p>En 2026, les agents IA passent du concept à la réalité en entreprise. Contrairement à un chatbot classique, un agent peut planifier, utiliser des outils et enchaîner plusieurs tâches de façon autonome. McKinsey les présente comme "la prochaine frontière de l'IA générative". Des cabinets comme EY et Orange Business confirment que leur adoption transforme déjà les opérations métier.</p>
+        <a href="https://www.ey.com/fr_ch/newsroom/2026/03/ai-trends-2026-between-sovereignty-agent-economy-and-regulatory-turning-point" class="article-link" target="_blank">Lire l'article EY Suisse →</a>
+      </div>
+
+      <div class="ia-article">
+        <div class="ia-article-top">
+          <span class="ia-date">Mai 2026</span>
+          <span class="ia-badge badge-teal">Multimodalité</span>
+        </div>
+        <h3>L'IA multimodale : texte, image, son et vidéo dans un seul modèle</h3>
+        <p>Les nouveaux modèles comme Gemini 3 Pro (Google) ou GPT-5.1 (OpenAI) combinent plusieurs types de données simultanément. Un seul système peut désormais comprendre une photo, en parler et produire une réponse vidéo. Cette évolution transforme les usages en formation, en assistance client et dans la création de contenu automatisée.</p>
+        <a href="https://bigmedia.bpifrance.fr/nos-dossiers/nouvelles-tendances-ia-ce-qui-va-transformer-2026" class="article-link" target="_blank">Lire l'article BPI France →</a>
+      </div>
+
+      <div class="ia-article">
+        <div class="ia-article-top">
+          <span class="ia-date">Janvier 2026</span>
+          <span class="ia-badge badge-blue">Informatique quantique</span>
+        </div>
+        <h3>IBM annonce le premier avantage quantique en 2026</h3>
+        <p>IBM a publiquement déclaré que 2026 marquera la première fois qu'un ordinateur quantique surpassera un ordinateur classique sur un problème concret. Cette avancée ouvre de nouvelles perspectives pour les algorithmes d'apprentissage automatique et le traitement de données massives.</p>
+        <a href="https://www.ibm.com/fr-fr/think/news/ai-tech-trends-predictions-2026" class="article-link" target="_blank">Lire l'article IBM Think →</a>
+      </div>
+
+      <div class="ia-article">
+        <div class="ia-article-top">
+          <span class="ia-date">Mars 2026</span>
+          <span class="ia-badge badge-coral">Réglementation</span>
+        </div>
+        <h3>AI Act : l'Europe renforce le cadre légal de l'IA</h3>
+        <p>Le règlement européen sur l'IA classifie les systèmes selon 4 niveaux de risque. Suite à l'accord "Digital Omnibus" de mai 2026, les obligations pour les systèmes RH à haut risque (recrutement, évaluation) s'appliqueront en décembre 2027. Les entreprises doivent documenter leur usage de l'IA et garantir une supervision humaine sur les décisions sensibles.</p>
+        <a href="https://digital-strategy.ec.europa.eu/fr/policies/regulatory-framework-ai" class="article-link" target="_blank">Lire sur le site de la Commission européenne →</a>
+      </div>
+
+      <div class="ia-article">
+        <div class="ia-article-top">
+          <span class="ia-date">Février 2026</span>
+          <span class="ia-badge badge-amber">Impact métier</span>
+        </div>
+        <h3>IA et développement logiciel : le "vibe coding" s'impose</h3>
+        <p>L'IA générative modifie l'ingénierie logicielle plus vite que prévu. Les assistants de code (GitHub Copilot, Cursor…) automatisent les tâches répétitives. Le développeur se concentre davantage sur l'architecture et la revue de code. En SISR, l'AIOps automatise la supervision des réseaux et la cybersécurité IA représente un marché estimé à 135 milliards de dollars d'ici 2030.</p>
+        <a href="https://innowise.com/fr/blog/ai-trends/" class="article-link" target="_blank">Lire l'article Innowise →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SYNTHÈSE -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="label center">Bilan</div>
+      <h2 class="center">Synthèse de la veille</h2>
+      <div class="synthese-box">
+        <p>En 2026, l'IA passe d'un outil d'assistance à un véritable acteur autonome capable d'agir, de décider et de traiter simultanément texte, image et son. Pour les futurs professionnels de l'informatique, cette révolution exige deux choses en parallèle.</p>
+        <p>D'un côté, <strong>maîtriser les nouveaux outils IA</strong> : assistants de code en SLAM, AIOps et détection d'anomalies en SISR. De l'autre, <strong>comprendre le cadre réglementaire</strong> qui encadre leur usage (AI Act européen), car toute entreprise qui déploie de l'IA sera concernée par ces obligations dès 2027.</p>
+        <p>L'IA n'est plus une option mais une <strong>compétence transversale attendue</strong> dans tous les métiers de l'informatique.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTOCOLE -->
+  <section class="section">
+    <div class="container">
+      <div class="label center">Méthode</div>
+      <h2 class="center">Mon protocole de veille</h2>
+      <div class="protocol-steps">
+        <div class="protocol-step">
+          <div class="step-num">1</div>
+          <h4>Définir</h4>
+          <p>Identifier le thème, les questions de veille et les types de données recherchées</p>
+        </div>
+        <div class="protocol-arrow">→</div>
+        <div class="protocol-step">
+          <div class="step-num">2</div>
+          <h4>Collecter</h4>
+          <p>Feedly (flux RSS), sites officiels, rapports d'experts, médias spécialisés</p>
+        </div>
+        <div class="protocol-arrow">→</div>
+        <div class="protocol-step">
+          <div class="step-num">3</div>
+          <h4>Analyser</h4>
+          <p>Sélection des articles pertinents, vérification et recoupement des sources</p>
+        </div>
+        <div class="protocol-arrow">→</div>
+        <div class="protocol-step">
+          <div class="step-num">4</div>
+          <h4>Synthétiser</h4>
+          <p>Résumé par thème, mise en avant des informations essentielles</p>
+        </div>
+        <div class="protocol-arrow">→</div>
+        <div class="protocol-step">
+          <div class="step-num">5</div>
+          <h4>Partager</h4>
+          <p>Publication sur ce portfolio et sur LinkedIn</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="label center">Références</div>
+      <h2 class="center">Sources utilisées</h2>
+      <div class="sources-grid">
+        <div class="source-item">
+          <strong>Orange Business</strong>
+          <a href="https://www.orange.com/fr/whats-up/intelligence-artificielle-en-entreprise-productivite-et-gouvernance-en-2026" target="_blank">IA agentique & multimodale 2026</a>
+        </div>
+        <div class="source-item">
+          <strong>IBM Think</strong>
+          <a href="https://www.ibm.com/fr-fr/think/news/ai-tech-trends-predictions-2026" target="_blank">Prévisions experts 2026</a>
+        </div>
+        <div class="source-item">
+          <strong>BPI France / Big Media</strong>
+          <a href="https://bigmedia.bpifrance.fr/nos-dossiers/nouvelles-tendances-ia-ce-qui-va-transformer-2026" target="_blank">Tendances IA 2026</a>
+        </div>
+        <div class="source-item">
+          <strong>EY Suisse</strong>
+          <a href="https://www.ey.com/fr_ch/newsroom/2026/03/ai-trends-2026-between-sovereignty-agent-economy-and-regulatory-turning-point" target="_blank">Agents IA & souveraineté</a>
+        </div>
+        <div class="source-item">
+          <strong>KPMG</strong>
+          <a href="https://kpmg.com/fr/fr/insights/tech/tech-ia-trends-2026.html" target="_blank">Global Tech Report 2026</a>
+        </div>
+        <div class="source-item">
+          <strong>Commission européenne</strong>
+          <a href="https://digital-strategy.ec.europa.eu/fr/policies/regulatory-framework-ai" target="_blank">AI Act — texte officiel & calendrier</a>
+        </div>
+        <div class="source-item">
+          <strong>Direction générale des Entreprises</strong>
+          <a href="https://www.entreprises.gouv.fr/decryptages-de-nos-experts/le-reglement-europeen-sur-lintelligence-artificielle-publics-concernes" target="_blank">Règlement IA pour les entreprises</a>
+        </div>
+        <div class="source-item">
+          <strong>AdevWeb</strong>
+          <a href="https://www.adevweb.com/ressources/ai-act-entreprise-2026" target="_blank">Guide conformité AI Act 2026</a>
+        </div>
+        <div class="source-item">
+          <strong>CCI Paris Île-de-France</strong>
+          <a href="https://www.entreprises.cci-paris-idf.fr/actualites/2026-2027-vers-un-recrutement-plus-sur-mais-plus-exigeant-base-sur-lai-act" target="_blank">AI Act & recrutement</a>
+        </div>
+        <div class="source-item">
+          <strong>Innowise</strong>
+          <a href="https://innowise.com/fr/blog/ai-trends/" target="_blank">IA & développement logiciel</a>
+        </div>
+        <div class="source-item">
+          <strong>Botpress</strong>
+          <a href="https://botpress.com/fr/blog/top-artificial-intelligence-trends" target="_blank">10 tendances IA & cybersécurité</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 — Portfolio BTS SIO · Noah MARTIN</p>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>

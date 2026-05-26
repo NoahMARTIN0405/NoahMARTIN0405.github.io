@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio BTS SIO — Accueil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">Portfolio<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="situations.html">Situation professionnelle</a></li>
+      <li><a href="competences.html">Bloc de compétences</a></li>
+      <li><a href="veille.html">Veille technologique</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">BTS SIO — SLAM</div>
+    <h1 class="hero-title">Noah <span class="accent">MARTIN</span></h1>
+    <p class="hero-subtitle">Étudiant en BTS Services Informatiques aux Organisations<br>Option Solutions Logicielles et Applications Métiers</p>
+    <div class="hero-actions">
+      <a href="img/CV_Noah_MARTIN.pdf" class="btn btn-primary" target="_blank">📄 Ouvrir mon CV</a>
+      <a href="https://linkedin.com" target="_blank" class="btn btn-outline">🔗 LinkedIn</a>
+    </div>
+    <div class="hero-scroll">↓</div>
+  </section>
+
+  <!-- PRÉSENTATION -->
+  <section class="section">
+    <div class="container two-col">
+      <div class="col-text">
+        <div class="label">À propos de moi</div>
+        <h2>Qui suis-je ?</h2>
+        <p>Je m’appelle Noah MARTIN, j’ai 21 ans et je suis actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations), spécialité SLAM (Solutions Logicielles et Applications Métiers). Titulaire d’un baccalauréat STMG (Sciences et Technologies du Management et de la Gestion), option Mercatique, j’ai choisi de faire une pause de deux ans après son obtention afin de réfléchir à mon orientation et d’acquérir une première expérience dans le monde du travail. Lorsque j’ai intégré ce BTS, je n’étais pas certain qu’il correspondait réellement à ce que je voulais faire. Cependant, mes stages m’ont permis de confirmer mon intérêt pour l’informatique : j’ai découvert que je souhaitais m’investir pleinement dans l’amélioration du quotidien des utilisateurs à travers des solutions logicielles innovantes.</p>
+      </div>
+      <div class="col-card info-card">
+        <div class="info-item">
+          <span class="info-icon">🎓</span>
+          <div>
+            <strong>Formation</strong>
+            <p>BTS SIO — option SLAM</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div>
+            <strong>Localisation</strong>
+            <p>Toulouse, France</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📧</span>
+          <div>
+            <strong>Contact</strong>
+            <p>noah.martin@limayrac.fr</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">💼</span>
+          <div>
+            <strong>Disponibilité</strong>
+            <p>Stage & Alternance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="label center">Parcours</div>
+      <h2 class="center">Mon parcours professionnel</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 — 2026</div>
+          <div class="timeline-card">
+            <span class="timeline-badge formation">Formation</span>
+            <h3>BTS Services Informatiques aux Organisations</h3>
+            <p class="timeline-lieu">Institut Limayrac — Toulouse</p>
+            <p>Formation en deux ans orientée développement.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">12/01/2026 – 20/02/2026</div>
+          <div class="timeline-card">
+            <span class="timeline-badge stage">Stage</span>
+            <h3>Développeur Full stack</h3>
+            <p class="timeline-lieu">ACTIA AEROSPACE — Colomiers</p>
+            <p>Stage de 6 semaines : développement d'outils de production.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">12/05/2025 – 27/06/2025</div>
+          <div class="timeline-card">
+            <span class="timeline-badge">Stage</span>
+            <h3>Développeur Full stack</h3>
+            <p class="timeline-lieu">ACTIA AEROSPACE — Colomiers</p>
+            <p>Stage de 6 semaines : développement d'outils de gestion de production.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 - 2022</div>
+          <div class="timeline-card">
+            <span class="timeline-badge">Bac STMG</span>
+            <h3>Bac STMG</h3>
+            <p class="timeline-lieu">Lycée Toulouse Lautrec — Toulouse</p>
+            <p>Bac sciences et technologies du management et de la gestion option mercatique</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container center">
+      <h2>Envie d'en savoir plus ?</h2>
+      <p>Consultez mes compétences, mes situations professionnelles ou ma veille technologique.</p>
+      <div class="hero-actions">
+        <a href="competences.html" class="btn btn-primary">Voir mes compétences</a>
+        <a href="situations.html" class="btn btn-outline">Mes situations</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 — Portfolio BTS SIO · Noah MARTIN</p>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>

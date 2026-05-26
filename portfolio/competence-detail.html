@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio BTS SIO — Compétence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">Portfolio<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="situations.html">Situation professionnelle</a></li>
+      <li><a href="competences.html" class="active">Bloc de compétences</a></li>
+      <li><a href="veille.html">Veille technologique</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <div class="page-hero" id="comp-hero">
+    <div class="label center" id="comp-label">COMPÉTENCE 01</div>
+    <h1 class="page-title" id="comp-title">Gérer le patrimoine informatique</h1>
+    <p class="page-subtitle" id="comp-desc">Recenser et identifier les ressources numériques de l'organisation</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <a href="competences.html" class="back-link">← Retour aux compétences</a>
+
+      <div class="comp-detail-header">
+        <h2>Situations professionnelles prouvant cette compétence</h2>
+        <p>Voici les situations réalisées en formation et en stage qui démontrent la maîtrise de cette compétence.</p>
+      </div>
+
+      <div class="situations-grid" id="comp-situations">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 — Portfolio BTS SIO · Prénom NOM</p>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    const competences = {
+      1: {
+        label: "COMPÉTENCE 01",
+        title: "Gérer le patrimoine informatique",
+        desc: "Recenser et identifier les ressources numériques, exploiter des référentiels, normes et standards.",
+        situations: [
+          {
+            num: "01", type: "formation", title: "Inventaire et gestion du parc informatique",
+            desc: "Réalisation d'un inventaire complet du parc informatique avec l'outil OCS Inventory. Mise à jour de la base de données du parc et rédaction d'un rapport de conformité.",
+            tools: ["OCS Inventory", "Excel"], date: "2024"
+          },
+          {
+            num: "05", type: "stage", title: "Mise à jour du parc informatique en entreprise",
+            desc: "Dans le cadre du stage, mise à jour physique et logicielle d'une trentaine de postes. Remplacement de composants défaillants et déploiement d'images Windows.",
+            tools: ["Windows Server", "WDS"], date: "Avril 2025"
+          }
+        ]
+      },
+      2: {
+        label: "COMPÉTENCE 02",
+        title: "Répondre aux incidents et demandes d'assistance",
+        desc: "Traiter des demandes concernant les services réseau, système, équipements et logiciels.",
+        situations: [
+          {
+            num: "02", type: "formation", title: "Assistance utilisateur et ticketing",
+            desc: "Traitement de tickets d'assistance via GLPI. Diagnostic et résolution d'incidents matériels et logiciels. Rédaction de procédures de résolution.",
+            tools: ["GLPI", "Windows"], date: "2024"
+          },
+          {
+            num: "06", type: "stage", title: "Traitement d'incidents réseau en entreprise",
+            desc: "Diagnostic et résolution d'incidents liés à la connectivité réseau. Configuration de prises réseau et vérification de la topologie via des outils de diagnostic.",
+            tools: ["Ping", "Wireshark", "Cisco"], date: "Mai 2025"
+          }
+        ]
+      },
+      3: {
+        label: "COMPÉTENCE 03",
+        title: "Développer la présence en ligne de l'organisation",
+        desc: "Participer à la valorisation de l'image de l'organisation sur les médias numériques.",
+        situations: [
+          {
+            num: "03", type: "formation", title: "Création d'un site web portfolio",
+            desc: "Développement d'un site web portfolio en HTML/CSS/JS pour présenter mes compétences et situations professionnelles dans le cadre du BTS SIO.",
+            tools: ["HTML", "CSS", "JavaScript"], date: "2025"
+          }
+        ]
+      },
+      4: {
+        label: "COMPÉTENCE 04",
+        title: "Travailler en mode projet",
+        desc: "Analyser les objectifs et modalités d'organisation, planifier et évaluer les écarts.",
+        situations: [
+          {
+            num: "04", type: "formation", title: "Gestion de projet en mode agile",
+            desc: "Participation à un projet de groupe en appliquant la méthode agile Scrum. Planification des sprints, réunions stand-up et livraison itérative.",
+            tools: ["Trello", "Scrum"], date: "2025"
+          }
+        ]
+      },
+      5: {
+        label: "COMPÉTENCE 05",
+        title: "Mettre à disposition des utilisateurs un service informatique",
+        desc: "Réaliser des tests, déployer un service, accompagner les utilisateurs.",
+        situations: [
+          {
+            num: "07", type: "stage", title: "Déploiement d'un service de messagerie",
+            desc: "Installation et configuration d'un serveur de messagerie pour une PME. Paramétrage des comptes utilisateurs, règles de sécurité et documentation technique.",
+            tools: ["Exchange", "Outlook", "Active Directory"], date: "Juin 2025"
+          }
+        ]
+      },
+      6: {
+        label: "COMPÉTENCE 06",
+        title: "Organiser son développement professionnel",
+        desc: "Mettre en place son environnement d'apprentissage et sa veille informationnelle.",
+        situations: [
+          {
+            num: "08", type: "formation", title: "Mise en place d'une veille technologique",
+            desc: "Définition d'un protocole de veille technologique sur les systèmes et réseaux. Utilisation d'agrégateurs RSS, abonnements à des newsletters spécialisées.",
+            tools: ["Feedly", "RSS", "LinkedIn"], date: "2025"
+          }
+        ]
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get('id')) || 1;
+    const comp = competences[id];
+
+    document.getElementById('comp-label').textContent = comp.label;
+    document.getElementById('comp-title').textContent = comp.title;
+    document.getElementById('comp-desc').textContent = comp.desc;
+
+    const grid = document.getElementById('comp-situations');
+    comp.situations.forEach(s => {
+      grid.innerHTML += `
+        <div class="situation-card" data-type="${s.type}">
+          <div class="situation-number">${s.num}</div>
+          <div class="situation-meta">
+            <span class="competence-tag">${comp.label}</span>
+            <span class="date-tag">${s.date}</span>
+          </div>
+          <div style="margin-bottom:8px">
+            <span class="group-badge ${s.type}" style="font-size:0.7rem;padding:3px 10px;">${s.type === 'formation' ? 'En formation' : 'En stage'}</span>
+          </div>
+          <h3>${s.title}</h3>
+          <p>${s.desc}</p>
+          <div class="situation-tools">
+            ${s.tools.map(t => `<span class="tool-tag">${t}</span>`).join('')}
+          </div>
+          <a href="#" class="situation-link">Voir le détail →</a>
+        </div>`;
+    });
+  </script>
+</body>
+</html>
